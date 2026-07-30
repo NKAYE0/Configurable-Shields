@@ -1,0 +1,9 @@
+D:\GitHub\NerfedShields\obj\Debug\NerfedShields.csproj.AssemblyReference.cache
+D:\GitHub\NerfedShields\obj\Debug\NerfedShields.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitHub\NerfedShields\obj\Debug\NerfedShields.AssemblyInfoInputs.cache
+D:\GitHub\NerfedShields\obj\Debug\NerfedShields.AssemblyInfo.cs
+D:\GitHub\NerfedShields\obj\Debug\NerfedShields.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\NerfedShields\bin\Win64_Shipping_Client\NerfedShields.dll
+C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\NerfedShields\bin\Win64_Shipping_Client\NerfedShields.pdb
+D:\GitHub\NerfedShields\obj\Debug\NerfedShields.dll
+D:\GitHub\NerfedShields\obj\Debug\NerfedShields.pdb

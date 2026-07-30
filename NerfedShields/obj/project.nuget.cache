@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "VpuZd02KAQs=",
+  "success": true,
+  "projectFilePath": "D:\\GitHub\\NerfedShields\\NerfedShields.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\NK\\.nuget\\packages\\bannerlord.mcm\\5.0.0\\bannerlord.mcm.5.0.0.nupkg.sha512",
+    "C:\\Users\\NK\\.nuget\\packages\\bannerlord.modulemanager.source\\4.0.149\\bannerlord.modulemanager.source.4.0.149.nupkg.sha512",
+    "C:\\Users\\NK\\.nuget\\packages\\bannerlord.referenceassemblies.core\\1.4.5.114927\\bannerlord.referenceassemblies.core.1.4.5.114927.nupkg.sha512",
+    "C:\\Users\\NK\\.nuget\\packages\\lib.harmony\\2.3.3\\lib.harmony.2.3.3.nupkg.sha512"
+  ],
+  "logs": []
+}

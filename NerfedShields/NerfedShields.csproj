@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<LangVersion>9.0</LangVersion>
+		<Nullable>disable</Nullable>
+		<AssemblyName>NerfedShields</AssemblyName>
+		<RootNamespace>NerfedShields</RootNamespace>
+		<AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+
+		<!--
+			Point this at your Bannerlord install so the build can copy the DLL
+			straight into your Modules folder. Leave blank to just build to
+			bin\Debug locally and copy manually.
+			Example: C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord
+		-->
+		<GameFolder>C:\Program Files (x86)\Steam\steamapps\common\Mount &amp; Blade II Bannerlord</GameFolder>
+		<ModuleFolderName>NerfedShields</ModuleFolderName>
+		<OutputPath>$(GameFolder)\Modules\$(ModuleFolderName)\bin\Win64_Shipping_Client\</OutputPath>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<!--
+			These reference assemblies let the project build without a hand-edited
+			path to your game install. Check nuget.org for the latest version that
+			matches your game version.
+		-->
+		<PackageReference Include="Bannerlord.ReferenceAssemblies.Core" Version="1.4.5.114927" />
+		<PackageReference Include="Bannerlord.MCM" Version="5.0.0" IncludeAssets="compile" />
+		<PackageReference Include="Lib.Harmony" Version="2.3.3" IncludeAssets="compile" />
+	</ItemGroup>
+
+	<!-- Copies SubModule.xml and other module files alongside the built DLL's parent folder -->
+	<Target Name="CopyModuleFiles" AfterTargets="Build" Condition="Exists('$(GameFolder)')">
+		<ItemGroup>
+			<ModuleFiles Include="ModuleFiles\**\*.*" />
+		</ItemGroup>
+		<Copy SourceFiles="@(ModuleFiles)" DestinationFolder="$(GameFolder)\Modules\$(ModuleFolderName)\%(RecursiveDir)" SkipUnchangedFiles="true" />
+	</Target>
+
+</Project>
