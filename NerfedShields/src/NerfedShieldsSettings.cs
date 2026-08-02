@@ -15,7 +15,7 @@ namespace NerfedShields
         public override string FolderName => "NerfedShields";
         public override string FormatType => "json";
 
-        [SettingPropertyInteger("Shield HP %", 1, 100, Order = 0, RequireRestart = false,
+        [SettingPropertyInteger("Shield HP %", 0, 200, Order = 0, RequireRestart = false,
             HintText = "Scales the hit points of every shield in the game (player, companions, troops, and AI lords) to this percentage of its original value.")]
         [SettingPropertyGroup("Nerfed Shields")]
         public int ShieldHpPercent

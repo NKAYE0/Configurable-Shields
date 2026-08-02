@@ -9,6 +9,7 @@ namespace NerfedShields
     public class SubModule : MBSubModuleBase
     {
         private bool _settingsHooked;
+        private bool _gameInitialized;
 
         protected override void OnSubModuleLoad()
         {
@@ -43,8 +44,9 @@ namespace NerfedShields
 
         private void OnSettingsPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(NerfedShieldsSettings.ShieldHpPercent) ||
-                e.PropertyName == MCM.Abstractions.Base.BaseSettings.SaveTriggered)
+            if (_gameInitialized &&
+                (e.PropertyName == nameof(NerfedShieldsSettings.ShieldHpPercent) ||
+                 e.PropertyName == MCM.Abstractions.Base.BaseSettings.SaveTriggered))
             {
                 ApplyCurrentSetting();
             }
@@ -55,6 +57,7 @@ namespace NerfedShields
         public override void OnGameInitializationFinished(Game game)
         {
             base.OnGameInitializationFinished(game);
+            _gameInitialized = true;
             ShieldHpService.Initialize();
             ApplyCurrentSetting();
         }

@@ -101,7 +101,10 @@ namespace NerfedShields
                 DumpIntMembers(firstUnmatchedItemName, firstUnmatchedShield);
             }
 
-            _initialized = true;
+            // MCM can load its global settings before Bannerlord has registered the
+            // game's ItemObjects. Do not cache that empty state permanently; the
+            // game-initialization callback will retry once the item database exists.
+            _initialized = shieldsSeen > 0;
         }
 
         // TEMPORARY DIAGNOSTIC: prints every numeric field/property on a real shield's
@@ -222,7 +225,7 @@ namespace NerfedShields
                 Initialize();
             }
 
-            percent = Math.Max(1, Math.Min(100, percent));
+            percent = Math.Max(0, Math.Min(200, percent));
             float multiplier = percent / 100f;
 
             foreach (var item in GetAllItems())

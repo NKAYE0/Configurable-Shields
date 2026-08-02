@@ -7,3 +7,5 @@ C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Module
 C:\Program Files (x86)\Steam\steamapps\common\Mount & Blade II Bannerlord\Modules\NerfedShields\bin\Win64_Shipping_Client\NerfedShields.pdb
 D:\GitHub\NerfedShields\obj\Debug\NerfedShields.dll
 D:\GitHub\NerfedShields\obj\Debug\NerfedShields.pdb
+D:\GitHub\NerfedShields\buildtest\Modules\NerfedShields\bin\Win64_Shipping_Client\NerfedShields.dll
+D:\GitHub\NerfedShields\buildtest\Modules\NerfedShields\bin\Win64_Shipping_Client\NerfedShields.pdb
