@@ -1,40 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
 <Module>
-	<Name value="Nerfed Shields" />
-	<Id value="NerfedShields" />
-	<Version value="v1.0.0" />
-	<DefaultModule value="false" />
-	<SinglePlayer value="true" />
-	<MultiPlayer value="true" />
-	<Official value="false" />
-	<Category value="Modification" />
+  <Name value="Nerfed Shields" />
+  <Id value="NerfedShields" />
+  <Version value="v1.0.0" />
+  <SingleplayerModule value="true" />
+  <MultiplayerModule value="false" />
 
-	<!--
-		DependentVersion values below use the game version format TaleWorlds uses
-		(e.g. v1.4.6). Update to match the game version you're targeting before
-		packaging a release.
-	-->
-	<DependedModules>
-		<DependedModule Id="Native" DependentVersion="v1.0.0" />
-		<DependedModule Id="SandBoxCore" DependentVersion="v1.0.0" />
-		<DependedModule Id="Sandbox" DependentVersion="v1.0.0" />
-		<DependedModule Id="StoryMode" DependentVersion="v1.0.0" Optional="true" />
-		<DependedModule Id="CustomBattle" DependentVersion="v1.0.0" Optional="true" />
-		<DependedModule Id="Bannerlord.Harmony" DependentVersion="v2.0.0" />
-		<DependedModule Id="Bannerlord.UIExtenderEx" DependentVersion="v2.0.0" />
-		<DependedModule Id="Bannerlord.ButterLib" DependentVersion="v2.0.0" />
-		<DependedModule Id="Bannerlord.MBOptionScreen" DependentVersion="v5.0.0" />
-	</DependedModules>
+  <DependedModules>
+    <DependedModule Id="Native" />
+    <DependedModule Id="SandBoxCore" />
+    <DependedModule Id="Sandbox" />
+    <DependedModule Id="StoryMode" />
+    <DependedModule Id="CustomBattle" />
+    <DependedModule Id="Bannerlord.Harmony" />
+    <DependedModule Id="Bannerlord.UIExtenderEx" />
+    <DependedModule Id="Bannerlord.ButterLib" />
+    <DependedModule Id="Bannerlord.MBOptionScreen" />
+  </DependedModules>
 
-	<SubModules>
-		<SubModule>
-			<Name value="NerfedShields" />
-			<DLLName value="NerfedShields.dll" />
-			<SubModuleClassType value="NerfedShields.SubModule" />
-			<Tags>
-				<Tag key="DedicatedServerType" value="none" />
-			</Tags>
-		</SubModule>
-	</SubModules>
-
-	<Xmls />
+  <SubModules>
+    <SubModule>
+      <Name value="NerfedShields" />
+      <DLLName value="NerfedShields.dll" />
+      <SubModuleClassType value="NerfedShields.SubModule" />
+      <Tags>
+        <Tag key="DedicatedServerType" value="none" />
+      </Tags>
+    </SubModule>
+  </SubModules>
 </Module>
